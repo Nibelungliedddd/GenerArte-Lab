@@ -1,0 +1,133 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+  background-color: #050505;
+  color: #f0f0f0;
+  overflow: hidden;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background: #0f0f0f;
+  border-bottom: 1px solid #222;
+}
+
+.title-group h1 {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: white;
+}
+
+.title-group h2 {
+  font-size: 1rem;
+  color: #ccc;
+  font-weight: 400;
+  margin-top: 0.3rem;
+}
+
+nav button {
+  background: none;
+  border: 1px solid #fff;
+  color: #fff;
+  padding: 0.4rem 1rem;
+  margin-left: 0.5rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+nav button:hover {
+  background: #fff;
+  color: #000;
+}
+
+.container {
+  display: flex;
+  height: calc(100vh - 80px);
+}
+
+#canvas-container {
+  flex: 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#control-panel {
+  flex: 1;
+  background: #111;
+  border-left: 1px solid #333;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 1rem;
+}
+
+#control-panel h2 {
+  color: white;
+  margin-bottom: 1rem;
+}
+
+#control-panel label {
+  font-size: 0.9rem;
+}
+
+input[type="range"] {
+  width: 100%;
+  accent-color: #fff;
+}
+
+input[type="color"] {
+  width: 100%;
+  height: 40px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+button#aleatorioBtn {
+  margin-top: 1rem;
+  background: #fff;
+  color: #000;
+  border: none;
+  border-radius: 6px;
+  padding: 0.6rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+button#aleatorioBtn:hover {
+  background: #ccc;
+}
+
+.learn-container {
+  padding: 2rem;
+  max-width: 800px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+.learn-container h2 {
+  color: white;
+  margin-bottom: 1rem;
+}
+.learn-container a {
+  color: #00bfff;
+}
+.learn-container a:hover {
+  text-decoration: underline;
+}
+
+.seccion {
+  display: none;
+}
+.seccion.visible {
+  display: block;
+}

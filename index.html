@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GENERARTE — Laboratorio Experimental Web</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://cdn.jsdelivr.net/npm/p5@1.9.0/lib/p5.min.js"></script>
+</head>
+<body>
+  <header>
+    <div class="title-group">
+      <h1>GENERARTE</h1>
+      <h2>Laboratorio Experimental Web</h2>
+    </div>
+    <nav>
+      <button onclick="mostrarSeccion('experimento')">Experimento</button>
+      <button onclick="mostrarSeccion('aprende')">Aprende</button>
+    </nav>
+  </header>
+
+  <!-- Sección del arte generativo -->
+  <section id="experimento" class="seccion visible">
+    <div class="container">
+      <div id="canvas-container"></div>
+      <div id="control-panel">
+        <h2>Controles</h2>
+
+        <label>Velocidad</label>
+        <input type="range" id="velocidad" min="0" max="10" value="3" step="0.1">
+
+        <label>Tamaño</label>
+        <input type="range" id="tamano" min="5" max="100" value="25" step="1">
+
+        <label>Color base</label>
+        <input type="color" id="color" value="#ffffff">
+
+        <label>Complejidad</label>
+        <input type="range" id="complejidad" min="5" max="100" value="50" step="1">
+
+        <label>Aleatoriedad</label>
+        <input type="range" id="aleatoriedad" min="0" max="200" value="50" step="1">
+
+        <button id="aleatorioBtn">🎲 Generar Aleatorio</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Sección de aprendizaje -->
+  <section id="aprende" class="seccion">
+    <div class="learn-container">
+      <h2>Aprende p5.js</h2>
+      <p><strong>p5.js</strong> es una biblioteca de JavaScript que facilita crear arte visual y animaciones interactivas en la web. 
+      Funciona con dos funciones principales:</p>
+      <ul>
+        <li><strong>setup()</strong>: se ejecuta una sola vez al inicio. Aquí defines el tamaño del lienzo, colores iniciales, etc.</li>
+        <li><strong>draw()</strong>: se repite constantemente, generando movimiento, animación y cambio en el tiempo.</li>
+      </ul>
+      <p>Con p5.js puedes dibujar, animar, responder al teclado o al mouse, e incluso generar música o datos visuales.</p>
+      <p>Explora más recursos oficiales:</p>
+      <ul>
+        <li><a href="https://p5js.org/es/tutorials/" target="_blank">Tutoriales oficiales de p5.js</a></li>
+        <li><a href="https://p5js.org/es/examples/" target="_blank">Ejemplos de código en p5.js</a></li>
+      </ul>
+      <p>Este laboratorio busca inspirarte para entender que <em>“cualquiera puede crear con código”</em> y experimentar libremente.</p>
+    </div>
+  </section>
+
+  <script src="sketch.js"></script>
+  <script src="main.js"></script>
+</body>
+</html>
